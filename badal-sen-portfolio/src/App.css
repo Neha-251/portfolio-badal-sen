@@ -8,3 +8,15 @@
   /* font-family: 'Montez', cursive; */
   font-family: 'Prompt', sans-serif;
 }
+
+body{
+  background-color: rgb(255, 250, 245);
+}
+
+.none{
+  display: none;
+}
+
+.block{
+  display: block;
+}

@@ -3,7 +3,12 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 3rem;
+    background-color: #2525257c;
+}
+
+.spacediv{
+    height: 60px;
+    width: 100%;
 }
 
 nav > .container{
@@ -15,18 +20,18 @@ nav > div > .item {
     font-size: 1.3rem;
     cursor: pointer;
     color: white;
-    padding: 12px 25px;
+    padding: 3px 25px;
     border: none;
     background-color: transparent;
 }
 
 .item > .under{
-    height: 8px;
+    height: 8px;   
     width: 8px;
     border-radius: 50%;
     rotate: 90deg;
     transition: all 400ms ease;
-    background: linear-gradient(to right, violet, indigo, green, yellow, orange, red);
+    background: rgb(203, 83, 83);
 }
 
 .item:hover .under{
@@ -38,10 +43,10 @@ nav > div > .item {
 }
 
 .logo{
-    padding: 15px;
+    padding: 5px 15px;
     font-weight: 600;
     font-family: 'Great Vibes', cursive;
-    font-size: 30px;
-    color: grey;
+    font-size: 40px;
+    color: white;
     text-shadow: 4px 3px 2px rgb(203, 83, 83);
 }
