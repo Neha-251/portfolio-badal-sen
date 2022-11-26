@@ -1,33 +1,91 @@
-import background from "../images/background.jpeg"
-import badal from "../images/badal.jpeg"
 import "./about.css";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
+import { Slide1 } from "../slide1/slide1";
 
-export const About = (() => {
-    const {slideCount, setSlideCount} = useState(0) 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <img
+        src="https://www.bakemyweb.com/files/public/de/69/2770cae8aabc7706c58dde69/i/5d/e2/635cf0fa064e46002afa5de2/original?name=arrow-2.png&mimetype=image/png&cd=inline"
+        className="arrow-img-next"
+        alt="Next"
+      />
+    </div>
+  );
+}
 
-    useEffect({
-        
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <img
+        src="https://www.bakemyweb.com/files/public/de/69/2770cae8aabc7706c58dde69/i/5d/e2/635cf0fa064e46002afa5de2/original?name=arrow-2.png&mimetype=image/png&cd=inline"
+        className="arrow-img-prev"
+        alt="Prev"
+      />
+    </div>
+  );
+}
 
-    }[slideCount])
+export const About = () => {
+  const [slideCount, setSlideCount] = useState(0);
 
-    return(
-        <div className="about">
-            <div className='carousel'>
-                <div className='slide '>
-                    <h1>Hi, this is slide 1</h1>
-                </div>
-                <div className='slide none'>
-                    <h1>Hi, this is slide 2</h1>
-                </div>
-                <div className='slide none'>
-                    <h1>Hi, this is slide 3</h1>
-                </div>
-                <div className='slide none'>
-                    <h1>Hi, this is slide 4</h1>
-                </div>
-            </div>
-        </div>
-    )
+  useEffect(() => {}, [slideCount]);
 
-})
+  const settings = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 300,
+    dots: true,
+    infinite: true,
+    // autoplay: true,
+    autoplaySpeed: 3000,
+    appendDots: (dots) => (
+      <div
+        style={{
+          backgroundColor: "transparent",
+          padding: "2px",
+          display: "flex",
+        }}
+      >
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "8px",
+          height: "8px",
+          background: "#fbf4f4cc",
+          borderRadius: "50%",
+        }}
+      ></div>
+    ),
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
+  return (
+    <Slider {...settings} className="carousel">
+      <div className="slide">
+        <Slide1 />
+      </div>
+      <div className="slide">
+        <h3>2</h3>
+      </div>
+      <div className="slide">
+        <h3>3</h3>
+      </div>
+    </Slider>
+  );
+};

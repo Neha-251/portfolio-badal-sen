@@ -1,0 +1,54 @@
+
+
+.slide1{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('https://media.istockphoto.com/id/1360927961/photo/abstract-background-with-interweaving-of-colored-lines-and-dots-network-connection-structure.jpg?s=170667a&w=0&k=20&c=yF8UrEJ3LO-_wD0IXKwPwtwEC5unK4sG9Q6dXF3TMRc=');
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+.upper-div{
+  width: 100%;
+  height: 65%;
+  color: white;
+  display: flex;
+  gap: 20px;
+  width: 60% ;
+  margin: auto;
+}
+
+.left-text{
+  width: 45%;
+  font-size: 48px;
+  line-height: 120%;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  letter-spacing: 0.5px;
+}
+
+.right-text{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.right-text > p{
+  font-size: 17px;
+  margin: 10px 0;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.lower-div{
+  height: 35%;
+  width: 100%;
+  position: absolute;
+  background: #bd02708f;
+}
+

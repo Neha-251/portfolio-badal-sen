@@ -3,17 +3,75 @@
 }
 
 .carousel{
+    width: 70%;
+    height: 50vh;
+   text-align: center;
+    margin: 20px auto;
+    position: relative;
+    overflow: visible;
+}
+
+.slide, .slick-slide{
     width: 100%;
-    height: 90vh;
-    align-items: center;
-    border: 1px solid red;
-    margin: auto;
+    height: 50vh;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+
+.slick-track{
     display: flex;
 }
 
-.slide{
-    width: 100%;
-    height: 100%;
+.slick-arrow{
+    position: absolute;
+    top: 45%;
+    z-index: 99;
+    /* background-color: #ffffff52; */
+    line-height: 0%;
+    padding: 5px 0;
+}
+.slick-next{
+    right: -50px;
+}
+.slick-prev{
+    left: -50px;
 }
 
 
+.slick-dots{
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    left: 48%;
+}
+
+.slick-dots ul{
+    list-style: none;
+    gap: 8px;
+    display: flex;
+}
+
+.slick-dots li {
+    cursor: pointer;
+
+}
+
+li.slick-active > div{
+    background-color: rgb(250, 3, 85) !important;
+}
+
+.slick-dots li:hover{
+    background-color: rgb(247, 90, 137) !important;
+    border-radius: 50%;
+}
+
+.arrow-img-next, .arrow-img-prev{
+    height: 50px;
+    cursor: pointer;
+}
+
+.arrow-img-prev{
+    transform: rotate(180deg);
+}
