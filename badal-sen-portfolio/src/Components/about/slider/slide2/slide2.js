@@ -1,5 +1,5 @@
 import "./slide2.css";
-import badal from "../images/badal-1-transparent.png";
+import badal from "../../../images/badal-1-transparent.png";
 
 export const Slide2 = () => {
   return (
@@ -8,8 +8,8 @@ export const Slide2 = () => {
         <img src={badal} alt="badal" />
       </div>
       <div className="text-div">
-        <p>Test Papers practice for Madhyamik Exam</p>
-        <p>Test Papers practice for H.S. Exam</p>
+        <p>Class 5 to 12 W.B Board </p>
+        <p>Ray & Martin Question Bank English Solutions</p>
       </div>
     </div>
   );

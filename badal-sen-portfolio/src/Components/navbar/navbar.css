@@ -1,52 +1,142 @@
-nav{
-    position:fixed;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 999;
+  background-color: #64043c8f;
+}
+
+.spacediv {
+  height: 60px;
+  width: 100%;
+}
+
+.menu-cross {
+  display: none;
+}
+
+nav .container {
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 0px;
+  height: 50px;
+  transition: all 0.5s ease;
+  color: white;
+  position: relative;
+}
+
+.menuItem {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px 20px;
+}
+
+.subMenu {
+  display: none;
+  background: white;
+  position: absolute;
+  top: 60px;
+  color: #61033afd;
+  font-size: 18px;
+  z-index: 999;
+  border-top: 4px solid #61033afd;
+}
+.subMenuItem {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.subMenuItem:hover {
+  background: #64043c8f;
+}
+
+.menu:hover {
+  background: white;
+  color: #61033afd;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1000px) {
+  .menu:hover .subMenu,
+  .subMenu:hover {
+    display: block;
+  }
+}
+
+.logo {
+  padding: 5px 15px;
+  font-weight: 600;
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  color: white;
+  text-shadow: 4px 3px 2px rgb(203, 83, 83);
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    display: none;
+  }
+  .container-close {
+    position: absolute;
     background-color: #64043c8f;
-}
+    right: 0;
+    flex-direction: column;
+    width: 280px;
+    transform: translateX(100%);
+    transition: all 300ms ease-in-out;
+    height: 100vh;
+  }
 
-.spacediv{
-    height: 60px;
-    width: 100%;
-}
-
-nav > .container{
+  .menu-cross,
+  .menu-cross-open {
     display: flex;
-}
-
-nav > div > .item {
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
-    font-size: 1.3rem;
+    width: 80px;
     cursor: pointer;
-    color: white;
-    padding: 3px 25px;
-    border: none;
-    background-color: transparent;
-}
+    align-items: left;
+  }
 
-.item > .under{
-    height: 8px;   
-    width: 8px;
-    border-radius: 50%;
-    rotate: 90deg;
-    transition: all 400ms ease;
-    background: rgb(203, 83, 83);
-}
+  .line {
+    background-color: white;
+    height: 2px;
+    width: 35px;
+    margin: 3px auto;
+    transition: all 0.5s ease;
+  }
 
-.item:hover .under{
-    rotate: 0deg;
-    border-radius: 5px;
-    border-radius: 0;
-    height: 3px;
-    width: 100%;
-}
+  .menu-cross-open .top {
+    transform: rotate(45deg);
+    margin-top: 10px;
+  }
+  .menu-cross-open .middle {
+    opacity: 0;
+  }
+  .menu-cross-open .bottom {
+    transform: rotate(-45deg);
+    margin-top: -14px;
+  }
 
-.logo{
-    padding: 5px 15px;
-    font-weight: 600;
-    font-family: 'Great Vibes', cursive;
-    font-size: 40px;
-    color: white;
-    text-shadow: 4px 3px 2px rgb(203, 83, 83);
+  .leftNav {
+    position: relative;
+  }
+
+  .container-open {
+    position: absolute;
+    background-color: #64043c8f;
+    right: 0;
+    width: 280px;
+    transform: translateX(0%);
+    transition: all 500ms ease-in-out;
+    height: 100vh;
+  }
 }

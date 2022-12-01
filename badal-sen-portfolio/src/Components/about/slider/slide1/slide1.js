@@ -6,9 +6,10 @@ export const Slide1 = () => {
       <div className="upper-div">
         <div className="left-text">15+ Years of Teaching Experience</div>
         <div className="right-text">
-          <p>Will help you understand each and every concept ogf grammar.</p>
-          <p>Practise ordinary as well as high level grammar questions.</p>
-          <p>Become an expert of English Grammar with Badal Sen.</p>
+          <p>WB Board Class V to X Important Textual Short Questions & Answers</p>
+          <p>WBCHSE Textual Important Board Questions & Answers</p>
+          <p>WBCHSE Textual Important Grammar Questions & Answers</p>
+          <p>H.S. ABTA TEXT PAPER Complete English Grammar Solutions</p>
         </div>
       </div>
       <div className="lower-div"></div>

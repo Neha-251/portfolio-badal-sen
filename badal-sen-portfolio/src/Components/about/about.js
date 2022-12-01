@@ -1,9 +1,10 @@
 import "./about.css";
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { Slide1 } from "../slide1/slide1";
-import { Slide2 } from "../slide2/slide2";
-import { Slide3 } from "../slide3/slide3";
+import { Slide1 } from "./slider/slide1/slide1";
+import { Slide2 } from "./slider/slide2/slide2";
+import { Slide3 } from "./slider/slide3/slide3";
+
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -83,7 +84,7 @@ export const About = () => {
         <Slide1 />
       </div>
       <div className="slide">
-        <Slide2 />
+        <Slide2/>
       </div>
       <div className="slide">
         <Slide3 />

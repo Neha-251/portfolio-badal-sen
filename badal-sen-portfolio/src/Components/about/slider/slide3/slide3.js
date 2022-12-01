@@ -1,5 +1,5 @@
 import "./slide3.css"
-import english_vidyapith from "../images/english-vidyapith.png";
+import english_vidyapith from "../../../images/english-vidyapith.png";
 
 export const Slide3 = () => {
   
@@ -8,7 +8,7 @@ export const Slide3 = () => {
       <div className="text-div">
         <h1>Follow us on Youtube</h1>
         <p>For daily youtube live Classes</p>
-        <button>Subscribe</button>
+        <button className="button-animation">Subscribe</button>
       </div>
       <div className="img-div">
         <div className="overlay"></div>

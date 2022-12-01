@@ -31,3 +31,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.slide2 > .text-div > p:nth-child(1) {
+  font-size: 35px;
+  color: #f5035c;
+}

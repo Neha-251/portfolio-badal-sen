@@ -1,0 +1,8 @@
+
+.home-mainDiv{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  grid-gap: 15px;
+  margin: 50px auto;
+}
